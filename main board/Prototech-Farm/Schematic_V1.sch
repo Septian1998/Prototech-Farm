@@ -10124,6 +10124,7 @@ by exp-lbrs.ulp</description>
 <part name="R18" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="10k"/>
 <part name="R19" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="10k"/>
 <part name="Q8" library="BeagleBone_Blue_R3" library_urn="urn:adsk.eagle:library:5828899" deviceset="MOSFET-NCHANNEL" device="BSS138" package3d_urn="urn:adsk.eagle:package:5829571/1" value="2n7000"/>
+<part name="R20" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="M1206" package3d_urn="urn:adsk.eagle:package:23566/2" value="4k7"/>
 </parts>
 <sheets>
 <sheet>
@@ -10309,6 +10310,7 @@ Downloader</text>
 <instance part="R18" gate="G$1" x="167.64" y="36.83" rot="R90"/>
 <instance part="R19" gate="G$1" x="152.4" y="36.83" rot="R90"/>
 <instance part="Q8" gate="G$1" x="160.02" y="29.21" rot="MR270"/>
+<instance part="R20" gate="G$1" x="66.04" y="101.6" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10923,20 +10925,21 @@ Downloader</text>
 </segment>
 <segment>
 <pinref part="X3" gate="-1" pin="S"/>
-<wire x1="44.45" y1="102.87" x2="49.53" y2="102.87" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
 <wire x1="59.69" y1="127" x2="59.69" y2="123.19" width="0.1524" layer="91"/>
 <wire x1="59.69" y1="123.19" x2="59.69" y2="113.03" width="0.1524" layer="91"/>
-<wire x1="59.69" y1="113.03" x2="59.69" y2="102.87" width="0.1524" layer="91"/>
-<wire x1="59.69" y1="102.87" x2="49.53" y2="102.87" width="0.1524" layer="91"/>
+<wire x1="59.69" y1="113.03" x2="59.69" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="59.69" y1="106.68" x2="59.69" y2="102.87" width="0.1524" layer="91"/>
+<wire x1="59.69" y1="102.87" x2="44.45" y2="102.87" width="0.1524" layer="91"/>
 <pinref part="X2" gate="-1" pin="S"/>
-<wire x1="44.45" y1="113.03" x2="49.53" y2="113.03" width="0.1524" layer="91"/>
-<wire x1="49.53" y1="113.03" x2="59.69" y2="113.03" width="0.1524" layer="91"/>
+<wire x1="44.45" y1="113.03" x2="59.69" y2="113.03" width="0.1524" layer="91"/>
 <junction x="59.69" y="113.03"/>
 <pinref part="X1" gate="-1" pin="S"/>
-<wire x1="44.45" y1="123.19" x2="49.53" y2="123.19" width="0.1524" layer="91"/>
-<wire x1="49.53" y1="123.19" x2="59.69" y2="123.19" width="0.1524" layer="91"/>
+<wire x1="44.45" y1="123.19" x2="59.69" y2="123.19" width="0.1524" layer="91"/>
 <junction x="59.69" y="123.19"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="59.69" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
+<junction x="59.69" y="106.68"/>
 </segment>
 <segment>
 <pinref part="X16" gate="-1" pin="S"/>
@@ -11284,8 +11287,11 @@ Downloader</text>
 <net name="TEMP_SNS0" class="0">
 <segment>
 <pinref part="X3" gate="-2" pin="S"/>
-<wire x1="44.45" y1="100.33" x2="49.53" y2="100.33" width="0.1524" layer="91"/>
 <label x="49.53" y="100.33" size="1.27" layer="95" xref="yes"/>
+<wire x1="44.45" y1="100.33" x2="59.69" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="59.69" y1="100.33" x2="59.69" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="59.69" y1="96.52" x2="66.04" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="153.67" y1="62.23" x2="154.94" y2="62.23" width="0.1524" layer="91"/>
